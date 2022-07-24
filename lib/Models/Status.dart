@@ -1,13 +1,12 @@
 
 class Status{
-  int key;
+  int key=DateTime.now().microsecondsSinceEpoch;
   String userkey;
   String link;
 
 //<editor-fold desc="Data Methods">
 
   Status({
-    required this.key,
     required this.userkey,
     required this.link,
   });
@@ -39,7 +38,6 @@ class Status{
     String? link,
   }) {
     return Status(
-      key: key ?? this.key,
       userkey: userkey ?? this.userkey,
       link: link ?? this.link,
     );
@@ -55,7 +53,6 @@ class Status{
 
   factory Status.fromMap(Map<String, dynamic> map) {
     return Status(
-      key: map['key'] as int,
       userkey: map['userkey'] as String,
       link: map['link'] as String,
     );

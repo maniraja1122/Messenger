@@ -15,11 +15,14 @@ class HomeView extends GetView{
     var _controller=Get.put(HomeController());
     return DefaultTabController(length: 3, child:
       Scaffold(
-        bottomNavigationBar: TabBar(labelColor: Colors.black,unselectedLabelColor: Colors.grey,tabs: [
-          Tab(icon:Icon(Icons.messenger_rounded),),
-          Tab(icon:Icon(Icons.people_alt),),
-          Tab(icon:Icon(Icons.phone_in_talk),),
-        ],),
+        bottomNavigationBar: Padding(
+          padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+          child: TabBar(labelColor: Colors.black,unselectedLabelColor: Colors.grey,tabs: [
+            Tab(icon:Icon(Icons.messenger_rounded),),
+            Tab(icon:Icon(Icons.people_alt),),
+            Tab(icon:Icon(Icons.phone_in_talk),),
+          ],),
+        ),
         body: TabBarView(
           children: [
             ChatView(),PeopleView(),CallLogView()
