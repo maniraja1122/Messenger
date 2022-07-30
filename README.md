@@ -1,17 +1,23 @@
-# messenger
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 # Messenger
+A Chatting App made with Flutter
+ <br>
+### Features : <br>
+Change and upload your dp and story<br>
+View stories uploaded by your friend chats  <br>
+Search your chats <br>
+See who is online and their last seen<br>
+Call other user<br>
+Send and recieve text messages,voice notes and images with no size limit<br>
+See the chat friends who are online and wave them with one click<br>
+Add chat friends<br>
+Maintain call logs<br>
+Login/Signup<br>
+And many more features......<br>
+ <br>
+### Note all the pages are dynamic and are updated in real time
+<br>
+The phone field was not taken from user as to protect the phone number's privacy for the demo.
+<br>
+### Video Preview
+
+[![Messenger](https://img.youtube.com/vi/z9GBBpLQUDk/0.jpg)](https://www.youtube.com/watch?v=z9GBBpLQUDk)
