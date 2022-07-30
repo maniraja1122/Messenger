@@ -4,7 +4,7 @@ import 'UserImageTop.dart';
 
 class TopBar extends StatelessWidget with PreferredSizeWidget {
   String toptitle = "";
-  Widget action1;
+  Widget? action1;
   Widget action2;
 
   TopBar(
@@ -23,10 +23,10 @@ class TopBar extends StatelessWidget with PreferredSizeWidget {
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       actions: [
-        Padding(
+        action1!=null?Padding(
           padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
           child: CircleAvatar(foregroundColor: Colors.black,backgroundColor:Colors.grey.shade200, child: action1),
-        ),
+        ):SizedBox(),
         Padding(
           padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
           child: CircleAvatar(foregroundColor: Colors.black,backgroundColor: Colors.grey.shade200,child: action2),

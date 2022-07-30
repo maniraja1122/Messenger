@@ -1,10 +1,12 @@
 
 
+import 'package:messenger/Repository/DBHelper.dart';
+
 class Messages{
-  int key=DateTime.now().microsecondsSinceEpoch;
-  int chatkey;
+  int key;
+  int chatkey=0;
   String message;
-  String sender;
+  String sender=DBHelper.auth.currentUser!.uid;
   bool isImage;
   bool isAudio;
   String link;
@@ -12,9 +14,8 @@ class Messages{
 //<editor-fold desc="Data Methods">
 
   Messages({
-    required this.chatkey,
+    required this.key,
     required this.message,
-    required this.sender,
     required this.isImage,
     required this.isAudio,
     required this.link,
@@ -66,9 +67,8 @@ class Messages{
     String? link,
   }) {
     return Messages(
-      chatkey: chatkey ?? this.chatkey,
+      key: key??this.key,
       message: message ?? this.message,
-      sender: sender ?? this.sender,
       isImage: isImage ?? this.isImage,
       isAudio: isAudio ?? this.isAudio,
       link: link ?? this.link,
@@ -89,9 +89,8 @@ class Messages{
 
   factory Messages.fromMap(Map<String, dynamic> map) {
     return Messages(
-      chatkey: map['chatkey'] as int,
+      key: map['key'] as int,
       message: map['message'] as String,
-      sender: map['sender'] as String,
       isImage: map['isImage'] as bool,
       isAudio: map['isAudio'] as bool,
       link: map['link'] as String,
